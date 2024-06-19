@@ -1,9 +1,9 @@
-import Bits from "./_components/Bits";
+import Calculator from "./_components/Calculator";
 
 export default function Home() {
 	return (
 		<main>
-			<Bits bitCount={8} />
+			<Calculator />
 		</main>
 	);
 }
