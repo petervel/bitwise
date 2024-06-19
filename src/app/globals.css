@@ -16,7 +16,17 @@
   }
 }
 
-body {
+html, body {
   /* color: rgb(var(--foreground-rgb)); */
-  margin-inline: 20px;
+  height: 100%;
+  background-color: #eee;
+}
+
+main {
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+  height: 100%;
+  background-color: #fff;
+  padding: 2rem;
 }
