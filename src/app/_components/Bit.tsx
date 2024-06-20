@@ -1,3 +1,4 @@
+import { AnimatedCounter } from "react-animated-counter";
 import css from "./Bit.module.css";
 
 type BitProps = {
@@ -8,7 +9,12 @@ const Bit = (props: BitProps) => {
 	const { value, setValue } = props;
 	return (
 		<div className={css.bit} onClick={() => setValue(!value)}>
-			{value ? 1 : 0}
+			<AnimatedCounter
+				decrementColor="unset"
+				incrementColor="unset"
+				includeDecimals={false}
+				value={value ? 1 : 0}
+			/>
 		</div>
 	);
 };

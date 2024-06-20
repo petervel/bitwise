@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { ValueType } from "./Value";
+import css from "./TypeSwitcher.module.css";
 
 type TypeSwitcherProps = {
 	valueType: ValueType;
