@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import css from "./Value.module.css";
+import css from "./ResultValue.module.css";
 
 export enum ValueType {
 	Hexadecimal = "Hexadecimal",
@@ -8,12 +8,12 @@ export enum ValueType {
 	Unsigned = "Unsigned",
 }
 
-type ValueProps = {
+type ResultValueProps = {
 	bitCount: number;
 	value: number;
 	valueType: ValueType;
 };
-const Value = (props: ValueProps) => {
+const ResultValue = (props: ResultValueProps) => {
 	const { bitCount, value, valueType } = props;
 
 	const getValue = () => {
@@ -39,4 +39,4 @@ const Value = (props: ValueProps) => {
 	return <span className={classes}>{getValue()}</span>;
 };
 
-export default Value;
+export default ResultValue;

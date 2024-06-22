@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import Bit from "./Bit";
 import css from "./Bits.module.css";
-import { ValueType } from "./Value";
+import { ValueType } from "./ResultValue";
 
 type BitsProps = {
 	bitCount: number;
@@ -19,10 +19,16 @@ const Bits = (props: BitsProps) => {
 
 	const bits = [...Array(bitCount)].map((_, n) => n).reverse();
 	return (
-		<div className={css.bits}>
-			{bits.map((n) => (
-				<Bit key={n} value={getBit(n)} setValue={(v) => setBit(n, v)} />
-			))}
+		<div>
+			<div className={css.hint}>All your computer sees:</div>
+			<div className={css.bits}>
+				{bits.map((n) => (
+					<div key={n} className={css.bitContainer}>
+						<div className={css.bitId}>{n}</div>
+						<Bit value={getBit(n)} setValue={(v) => setBit(n, v)} />
+					</div>
+				))}
+			</div>
 		</div>
 	);
 };

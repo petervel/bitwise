@@ -17,7 +17,14 @@ main {
   height: 100%;
   background-color: #fff;
   margin: 0 auto;
-  padding: 3rem;
+  --outer-padding: 3rem;
+  padding-block: var(--outer-padding);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    padding-inline: var(--outer-padding);
+  }
 }
 
 .result-value, .changeable-value {

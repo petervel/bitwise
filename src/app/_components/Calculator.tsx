@@ -1,16 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Bits from "./Bits";
-import Value, { ValueType } from "./Value";
+import ResultValue, { ValueType } from "./ResultValue";
 import TypeSwitcher from "./TypeSwitcher";
 import css from "./Calculator.module.css";
 
 const Calculator = () => {
 	const bitCount = 8;
-	const [value, setValue] = useState(5);
+	const [value, setValue] = useState(0);
 	const [valueType, setValueType] = useState(ValueType.Hexadecimal);
 
+	useEffect(() => {
+		setValue(Math.floor(Math.random() * 256));
+	}, []);
 	return (
 		<div className={css.calculator}>
 			<Bits {...{ bitCount, value, setValue }} />
@@ -19,7 +22,7 @@ const Calculator = () => {
 				value...
 			</div>
 			<div className={css.description}>
-				Its value would be <Value {...{ bitCount, value, valueType }} />
+				Its value would be <ResultValue {...{ bitCount, value, valueType }} />
 			</div>
 		</div>
 	);

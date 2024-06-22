@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { ValueType } from "./Value";
+import { ValueType } from "./ResultValue";
 import css from "./TypeSwitcher.module.css";
 import classNames from "classnames";
 
