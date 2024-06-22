@@ -3,4 +3,16 @@
     flex-direction: column;
     gap: 1rem;
     align-items: center;
+    --border-color: rgb(135, 96, 39);
+    --background-color: rgb(255, 251, 244);
+}
+
+@media screen and (prefers-color-scheme: dark)  {
+    .calculator {
+        --border-color: rgb(135, 96, 39);
+        --background-color: rgb(255, 251, 244);    
+    }
+}
+
+.description {
 }

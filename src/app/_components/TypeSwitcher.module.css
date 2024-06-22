@@ -1,0 +1,6 @@
+.typeSwitcher {
+    padding-inline: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}

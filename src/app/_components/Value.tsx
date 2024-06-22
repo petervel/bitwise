@@ -1,3 +1,6 @@
+import classNames from "classnames";
+import css from "./Value.module.css";
+
 export enum ValueType {
 	Hexadecimal = "Hexadecimal",
 	Signed = "Signed",
@@ -32,7 +35,8 @@ const Value = (props: ValueProps) => {
 		}
 	};
 
-	return <div>Value: {getValue()}</div>;
+	const classes = classNames("Value", css.value, "result-value");
+	return <span className={classes}>{getValue()}</span>;
 };
 
 export default Value;
