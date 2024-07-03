@@ -14,7 +14,7 @@ const TypeSwitcher = (props: TypeSwitcherProps) => {
 		setValueType((current: ValueType) => {
 			switch (current) {
 				case ValueType.Hexadecimal:
-					return ValueType.Signed;
+					return ValueType.Unsigned;
 				case ValueType.Unsigned:
 					return ValueType.Signed;
 				case ValueType.Signed:
