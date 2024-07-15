@@ -18,8 +18,8 @@ const Bits = (props: BitsProps) => {
 
   const bits = [...Array(bitCount)].map((_, n) => n).reverse();
   return (
-    <div>
-      <div className={css.hint}>All your computer sees:</div>
+    <div className={css.computer}>
+      <div className={css.hint}>What your computer sees:</div>
       <div className={css.bits}>
         {bits.map((n) => (
           <div key={n} className={css.bitContainer}>

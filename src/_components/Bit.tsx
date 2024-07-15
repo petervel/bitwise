@@ -16,6 +16,7 @@ const Bit = (props: BitProps) => {
         decrementColor="unset"
         incrementColor="unset"
         includeDecimals={false}
+        fontSize="24pt"
         value={value ? 1 : 0}
       />
     </div>

@@ -42,12 +42,14 @@ const Calculator = () => {
   return (
     <div className={css.calculator}>
       <Bits {...{ bitCount, value, setValue }} />
-      <div className={css.description}>
-        If you read this as a <TypeSwitcher {...{ valueType, setValueType }} />{" "}
-        value...
-      </div>
-      <div className={css.description}>
-        Its value would be <ResultValue {...{ bitCount, value, valueType }} />
+      <div className={css.humanInfo}>
+        <div className={css.description}>
+          If you read this as a <TypeSwitcher {...{ valueType, setValueType }} />{" "}
+          value...
+        </div>
+        <div className={css.description}>
+          Its value would be <ResultValue {...{ bitCount, value, valueType }} />
+        </div>
       </div>
     </div>
   );
